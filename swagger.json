@@ -1,0 +1,49 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "test",
+    "version": "0.0"
+  },
+  "security": [
+    {
+      "api_key": []
+    },
+    {
+      "seymour_oauth": []
+    }
+  ],
+  "consumes": [
+    "application/json",
+    "application/x-www-form-urlencoded",
+    "application/jwt"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/accounts/": {
+      "get": {
+        "summary": "List accounts",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "date",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          }
+        }
+      }
+    }
+  }
+}
